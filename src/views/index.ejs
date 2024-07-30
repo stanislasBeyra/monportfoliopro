@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Portfolio</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 2rem 1rem;
+            animation: fadeIn 2s;
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+
+        section {
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            padding: 1rem 0;
+            color: #fff;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-section {
+            background-color: #1f1f1f;
+            padding: 3rem 0;
+            color: #ffffff;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .what-i-do {
+            background-color: #2b2b2b;
+            padding: 3rem 0;
+        }
+
+        .what-i-do .icon-box {
+            background-color: #333;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .what-i-do .icon-box i {
+            font-size: 3rem;
+            color: #fbc531;
+            margin-bottom: 1rem;
+        }
+
+        .what-i-do .icon-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .what-i-do .icon-box p {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+        .education-section,
+        .experience-section {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.education-section h2,
+.experience-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline {
+    margin-top: 2rem;
+    border-left: 2px solid #444;
+    padding-left: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -0.75rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #444;
+    border: 3px solid #f0a500;
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: #f0a500;
+}
+
+.timeline-item span {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg " style="background: #f0a500;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <!-- <header class="jumbotron text-center container mt-5">
+        <h1 class="display-4">Bienvenue sur mon portfolio</h1>
+        <p class="lead">Je suis un développeur web.</p>
+    </header> -->
+
+    <!-- About Section -->
+    <section id="about" class="about-section container mt-5">
+        <div class="about-content">
+            <h2 class="section-title">À propos de moi</h2>
+            <p>Je suis un directeur créatif et designer UI/UX de Sydney, en Australie, travaillant dans le développement web et les médias imprimés. J'aime transformer des problèmes complexes en designs simples, beaux et intuitifs.</p>
+            <p>Mon travail consiste à construire votre site web de manière fonctionnelle et conviviale, tout en étant attrayant. De plus, j'ajoute une touche personnelle à votre produit et m'assure qu'il soit accrocheur et facile à utiliser. Mon objectif est de transmettre votre message et votre identité de la manière la plus créative possible. J'ai créé des designs web pour de nombreuses entreprises de marques célèbres.</p>
+        </div>
+    </section>
+
+    <!-- What I'm Doing Section -->
+    <section class="what-i-do container mt-5" >
+        <div class="container">
+            <h2 class="section-title">Mes Competences</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>Design Web</h3>
+                        <p>Le design le plus moderne et de haute qualité réalisé à un niveau professionnel.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="fas fa-code"></i>
+                        <h3>Développement Web</h3>
+                        <p>Développement de sites de haute qualité à un niveau professionnel.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Applications Mobiles</h3>
+                        <p>Développement professionnel d'applications pour iOS et Android.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="fas fa-camera"></i>
+                        <h3>Photographie</h3>
+                        <p>Je réalise des photos de haute qualité de toute catégorie à un niveau professionnel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education and Experience Section -->
+<section id="resume" class="container mt-5">
+    <div class="education-section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>University School Of The Arts</h3>
+                <span>2007 — 2008</span>
+                <p>Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>New York Academy Of Art</h3>
+                <span>2006 — 2007</span>
+                <p>Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p>
+            </div>
+            <div class="timeline-item">
+                <h3>High School Of Art And Design</h3>
+                <span>2002 — 2004</span>
+                <p>Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-section mt-5">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Creative Director</h3>
+                <span>2015 — Present</span>
+                <p>Nemo enim ipsam voluptatem blanditiis praesentium voluptatum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Art Director</h3>
+                <span>2013 — 2015</span>
+                <p>Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mt-5">
+        <h2>Mes Projets</h2>
+        <div id="projects-content" class="row">
+            <!-- Les projets seront chargés ici par AJAX -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5 d-flex align-items-center justify-content-center container mt-5">
+        <div style="width: 100%;">
+            <h2 class="text-center">Contactez-moi</h2>
+            <form action="/send-whatsapp-message" method="POST" style="max-width: 100%; margin: auto;">
+                <!-- Name input -->
+                <div data-mdb-input-init class="form-outline mb-4 p-2">
+                    <input type="text" id="form4Example1" name="number" class="form-control" />
+                    <label class="form-label" for="form4Example1">whatsapp number</label>
+                </div>
+                <!-- Message input -->
+                <div data-mdb-input-init class="form-outline mb-4 ">
+                    <textarea class="form-control" name="message" id="form4Example3" rows="4"></textarea>
+                    <label class="form-label" for="form4Example3">Message</label>
+                </div>
+
+                <!-- Submit button -->
+                <button data-mdb-ripple-init type="submit" style="width: 200px;" class="btn btn-primary btn-block mb-4">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+
+    <!-- JSON des projets intégré -->
+    <script type="application/json" id="projects-json">
+        [
+            {
+                "title": "Projet 1",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laudantium, ab exercitationem ad explicabo atque inventore quasi, quas commodi sequi hic. Eum nemo ullam laborum illum atque magni aperiam numquam.",
+
+                "image": "images/project1.jpg"
+            },
+            {
+                "title": "Projet 2",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laudantium, ab exercitationem ad explicabo atque inventore quasi, quas commodi sequi hic. Eum nemo ullam laborum illum atque magni aperiam numquam.",
+
+                "image": "images/project2.jpg"
+            },
+            {
+                "title": "Projet 3",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laudantium, ab exercitationem ad explicabo atque inventore quasi, quas commodi sequi hic. Eum nemo ullam laborum illum atque magni aperiam numquam.",
+                "image": "images/project3.jpg"
+            },
+            {
+                "title": "Projet 3",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laudantium, ab exercitationem ad explicabo atque inventore quasi, quas commodi sequi hic. Eum nemo ullam laborum illum atque magni aperiam numquam.",
+                "image": "images/project3.jpg"
+            },
+            {
+                "title": "Projet 3",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laudantium, ab exercitationem ad explicabo atque inventore quasi, quas commodi sequi hic. Eum nemo ullam laborum illum atque magni aperiam numquam.",
+                "image": "images/project4.jpg"
+            }
+        ]
+    </script>
+
+    <!-- Script pour charger les projets -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Charger les projets à partir du script JSON intégré
+            const projectsJSON = document.getElementById('projects-json').textContent;
+            const projects = JSON.parse(projectsJSON);
+
+            let output = '';
+            projects.forEach(function (project) {
+                output += `
+                    <div class="col-lg-4 col-md-6 col-sm-12 fade-in mb-5">
+                        <div class="card">
+                            <img src="${project.image}" class="card-img-top img-fluid" alt="${project.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p class="card-text">${project.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('projects-content').innerHTML = output;
+        });
+    </script>
+</body>
+
+</html>
