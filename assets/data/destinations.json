@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Paris",
+        "description": "Découvrez la beauté de la Ville Lumière.",
+        "price": "1500 €",
+        "image": "assets/images/destinations/paris.jpg",
+        "region": "europe"
+    },
+    {
+        "name": "Bali",
+        "description": "Un paradis tropical.",
+        "price": "1200 €",
+        "image": "assets/images/destinations/bali.jpg",
+        "region": "asie"
+    },
+    {
+        "name": "New York",
+        "description": "Explorez la ville qui ne dort jamais.",
+        "price": "1800 €",
+        "image": "assets/images/destinations/newyork.jpg",
+        "region": "amerique"
+    }
+]

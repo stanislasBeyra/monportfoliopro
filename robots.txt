@@ -1,0 +1,67 @@
+# Configuration du robots.txt pour AirBooking
+# https://airbooking.com/robots.txt
+
+# Règles globales pour tous les robots
+User-agent: *
+Allow: /
+Allow: /destinations/
+Allow: /vols/
+Allow: /hotels/
+Allow: /services/
+Allow: /blog/
+
+# Pages à ne pas indexer
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /maintenance/
+Disallow: /checkout/
+Disallow: /panier/
+Disallow: /recherche?*
+Disallow: /*?utm_source=
+Disallow: /*?fbclid=
+Disallow: /*/print/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Interdire l'accès aux fichiers spécifiques
+Disallow: /*.php$
+Disallow: /*.sql
+Disallow: /*.sql.gz
+Disallow: /*.sql.bz2
+Disallow: /*.log
+Disallow: /*.json
+Disallow: /*.xml$
+Disallow: /*.inc
+Disallow: /*.env
+
+# Règles spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Règles pour Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /photos/
+Allow: /destinations/*/gallery/
+Disallow: /admin/images/
+Disallow: /temp/images/
+
+# Règles pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://airbooking.com/sitemap.xml
+Sitemap: https://airbooking.com/sitemap-images.xml
+Sitemap: https://airbooking.com/sitemap-destinations.xml
+Sitemap: https://airbooking.com/sitemap-hotels.xml
